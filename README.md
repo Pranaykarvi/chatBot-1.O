@@ -20,3 +20,6 @@ The ChatBot Machine Learning project is a Python-based application that leverage
    cd chatBot_machine_learning
 ## Methodology
 The chatbot is developed using a combination of natural language processing techniques and machine learning algorithms. The methodology involves data preparation, model training, and chatbot response generation. The data is preprocessed to remove noise and increase training examples using synonym replacement. Multiple classification models are trained and evaluated to find the best-performing one. The trained model is then used to predict the intent of user input, and a random response is selected from the corresponding intent's responses. The chatbot is developed as a web application using Flask, allowing users to interact with it in real-time.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
