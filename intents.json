@@ -1,10 +1,11 @@
 {
-    "intents": [{
-            "tag": "greeting",
-            "patterns": ["Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day"],
-            "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-            "context": [""]
-        },
+    "intents": [
+		{
+			"tag": "greeting",
+			"patterns": ["Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day", "Hi"],
+			"responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+			"context": [""]
+		},
         {
             "tag": "goodbye",
             "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
@@ -29,6 +30,13 @@
             "responses": ["I am like your virtual assistant, you can ask me any questions. If I know I will answer", "I can answer your questions related to machine learning or any general anser. Come on try me", "I can chat with you. Come on talk me buddy", "We both can chat and make each other happy"],
             "context": [""]
         },
+		{
+			"tag": "noanswer",
+			"patterns": [],
+			"responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+			"context": [""]
+		},
+		
         {
             "tag": "adverse_drug",
             "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?"],
@@ -3219,7 +3227,247 @@
 			[
 				""
 			]
-		}
+		},
+	    {
+            "tag": "data_analytics_intro",
+            "patterns": [
+                "What is data analytics?",
+                "Define data analytics",
+                "How does data analytics work?"
+            ],
+            "responses": [
+                "Data analytics involves analyzing raw data to find trends and answer questions. It helps in decision-making by identifying patterns and extracting valuable insights."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "data_visualization_tools",
+            "patterns": [
+                "What tools are used for data visualization?",
+                "Suggest tools for data visualization",
+                "Best tools for creating graphs and charts"
+            ],
+            "responses": [
+                "Popular tools for data visualization include Tableau, Power BI, matplotlib, seaborn, and Plotly. Each offers unique features for creating impactful visualizations."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "preprocessing_missing_values",
+            "patterns": [
+                "How to handle missing values in data?",
+                "Techniques to deal with missing data",
+                "What to do if data has missing entries?"
+            ],
+            "responses": [
+                "Common techniques for handling missing values include: 1. Removing rows/columns with missing data, 2. Imputation using mean, median, or mode, 3. Using predictive models to fill missing values."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "data_scaling",
+            "patterns": [
+                "Why is data scaling important?",
+                "Explain data scaling",
+                "When should data be normalized?"
+            ],
+            "responses": [
+                "Data scaling ensures that features have a similar range, improving the performance of machine learning algorithms like SVM or gradient descent optimization. Methods include MinMaxScaler and StandardScaler."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "overfitting_causes",
+            "patterns": [
+                "What causes overfitting in a model?",
+                "Why does overfitting happen?",
+                "Reasons for model overfitting"
+            ],
+            "responses": [
+                "Overfitting occurs when a model learns noise and details from the training data, making it perform poorly on new data. Causes include excessive model complexity, insufficient data, and lack of regularization."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "overfitting_solutions",
+            "patterns": [
+                "How to prevent overfitting?",
+                "Techniques to avoid overfitting",
+                "Fixing overfitting issues"
+            ],
+            "responses": [
+                "To prevent overfitting: 1. Use cross-validation, 2. Simplify the model, 3. Employ regularization (L1/L2), 4. Increase the size of the training dataset, 5. Prune decision trees if using tree-based models."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "model_training_errors",
+            "patterns": [
+                "What errors occur during model training?",
+                "Common issues in training machine learning models",
+                "What can go wrong during training?"
+            ],
+            "responses": [
+                "Errors during model training include: 1. Data leakage, 2. Imbalanced datasets, 3. Incorrect feature scaling, 4. Overfitting or underfitting, 5. Convergence issues in optimization algorithms."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "data_cleaning_importance",
+            "patterns": [
+                "Why is data cleaning important?",
+                "Significance of data cleaning",
+                "What is the role of data cleaning in machine learning?"
+            ],
+            "responses": [
+                "Data cleaning ensures the accuracy and quality of data, removes irrelevant information, and prepares the dataset for reliable analysis and model training."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "general_knowledge_science",
+            "patterns": [
+                "Tell me a science fact",
+                "Share some knowledge about science",
+                "Give me a fun science trivia"
+            ],
+            "responses": [
+                "Did you know? Water can boil and freeze simultaneously in a phenomenon called the triple point, occurring under specific temperature and pressure conditions."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "general_knowledge_space",
+            "patterns": [
+                "Tell me a space fact",
+                "Share something about the universe",
+                "Interesting facts about space"
+            ],
+            "responses": [
+                "Space is completely silent because there is no medium (like air) to carry sound waves. That’s why astronauts communicate via radios."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "data_storage_methods",
+            "patterns": [
+                "What are common data storage methods?",
+                "Explain data storage techniques",
+                "How is data stored in organizations?"
+            ],
+            "responses": [
+                "Data is commonly stored using relational databases (SQL), non-relational databases (NoSQL), data lakes, and cloud storage solutions such as AWS S3 and Google Cloud Storage."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "data_quality_issues",
+            "patterns": [
+                "What are common data quality issues?",
+                "Explain issues in maintaining data quality",
+                "What problems occur due to poor data quality?"
+            ],
+            "responses": [
+                "Common data quality issues include missing values, duplicate entries, inconsistent data formats, outliers, and incorrect data. Addressing these issues is critical for accurate analysis."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "data_pipeline_components",
+            "patterns": [
+                "What are the components of a data pipeline?",
+                "Explain data pipeline architecture",
+                "How do data pipelines work?"
+            ],
+            "responses": [
+                "A data pipeline typically includes components for data extraction, transformation, loading (ETL), validation, monitoring, and storage. These work together to process data efficiently."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "model_evaluation_metrics",
+            "patterns": [
+                "What are common model evaluation metrics?",
+                "Explain evaluation metrics in machine learning",
+                "How to evaluate a machine learning model?"
+            ],
+            "responses": [
+                "Common evaluation metrics include accuracy, precision, recall, F1 score, ROC-AUC, mean squared error (MSE), and R-squared, depending on the task (classification or regression)."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "feature_engineering_tips",
+            "patterns": [
+                "What are tips for feature engineering?",
+                "How to create better features for models?",
+                "Techniques for feature engineering"
+            ],
+            "responses": [
+                "Tips for feature engineering include: 1. Creating interaction terms, 2. Normalizing data, 3. Encoding categorical variables, 4. Using domain knowledge to derive new features, 5. Selecting relevant features using feature importance scores."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "general_knowledge_history",
+            "patterns": [
+                "Tell me a historical fact",
+                "Share some knowledge about history",
+                "Interesting facts about ancient times"
+            ],
+            "responses": [
+                "Did you know? The Great Wall of China is not a single wall but a series of walls built by different dynasties over centuries to protect against invasions."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "general_knowledge_biology",
+            "patterns": [
+                "Tell me a biology fact",
+                "Share some knowledge about biology",
+                "Interesting facts about living organisms"
+            ],
+            "responses": [
+                "Did you know? Octopuses have three hearts. Two pump blood to the gills, and one pumps it to the rest of the body."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "data_preprocessing_steps",
+            "patterns": [
+                "What are the steps in data preprocessing?",
+                "Explain data preprocessing",
+                "Steps involved in preprocessing data"
+            ],
+            "responses": [
+                "Steps in data preprocessing include: 1. Data cleaning, 2. Handling missing values, 3. Data transformation (scaling/normalization), 4. Encoding categorical variables, 5. Splitting data into training and testing sets."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "hyperparameter_tuning",
+            "patterns": [
+                "What is hyperparameter tuning?",
+                "Explain hyperparameter tuning in ML",
+                "Why is hyperparameter tuning important?"
+            ],
+            "responses": [
+                "Hyperparameter tuning is the process of finding the best set of parameters for a machine learning model to optimize its performance. Techniques include Grid Search, Random Search, and Bayesian Optimization."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "imbalanced_data_handling",
+            "patterns": [
+                "How to handle imbalanced datasets?",
+                "Techniques for managing imbalanced data",
+                "What to do if data is imbalanced?"
+            ],
+            "responses": [
+                "To handle imbalanced datasets, you can: 1. Use resampling techniques (oversampling/undersampling), 2. Apply algorithms like SMOTE, 3. Use class weights in your model, 4. Choose evaluation metrics like F1 score or ROC-AUC."
+            ],
+            "context": [""]
+        }
 		
     ]
 }
